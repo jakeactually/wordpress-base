@@ -11,7 +11,7 @@
     <header id="header">
         <div class="wrap">
             <a href="<?= get_site_url() ?>">
-                <img src="<?= get_site_url() ?>/wp-content/uploads/2000/01/logo.png" alt="logo" height="45">
+                <img src="<?= get_template_directory_uri() ?>/logo.png" alt="logo" height="45">
             </a>
             <nav class="rh"><? wp_nav_menu(); ?></nav>
             <div id="open" class="rs">
