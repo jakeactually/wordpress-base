@@ -14,15 +14,15 @@
                 <img src="<?= get_template_directory_uri() ?>/logo.png" alt="logo" height="45">
             </a>
             <nav class="rh"><? wp_nav_menu(); ?></nav>
-            <div id="open" class="rs">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <button id="open" class="icon rs">
+                <i class="material-icons">menu</i>
+            </button>
         </div>
     </header>
 
     <nav id="side" class="rs">
-        <span id="close" class="icon-arrow-left"></span>
+        <button id="close" class="icon">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </button>
         <? wp_nav_menu(); ?>
     </nav>
