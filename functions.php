@@ -5,7 +5,8 @@
     register_nav_menus(['main' => "Principal"]);
     
     function jc_enqueue_scripts() {
-        wp_enqueue_style('jc_sli', "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css");
+        wp_enqueue_style('jc_material_icons', "https://fonts.googleapis.com/icon?family=Material+Icons");
+        wp_enqueue_style('jc_roboto', "https://fonts.googleapis.com/css?family=Roboto:400,700");
         wp_enqueue_style('jc_normalize', "https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css");
         wp_enqueue_style('jc_frontend', get_template_directory_uri() . "/frontend.css");
         wp_enqueue_style('jc_style', get_stylesheet_uri());
