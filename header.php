@@ -9,20 +9,17 @@
 <body <? body_class(); ?>>
     
     <header id="header">
-        <div class="wrap">
-            <a href="<?= get_site_url() ?>">
-                <img src="<?= get_template_directory_uri() ?>/logo.png" alt="logo" height="45">
-            </a>
-            <nav class="rh"><? wp_nav_menu(); ?></nav>
-            <button id="open" class="icon rs">
-                <i class="material-icons">menu</i>
-            </button>
-        </div>
-    </header>
-
-    <nav id="side" class="rs">
-        <button id="close" class="icon">
-            <i class="material-icons">keyboard_arrow_left</i>
+        <a href="<?= get_site_url() ?>">
+            <img src="<?= get_template_directory_uri() ?>/logo.png" alt="logo" height="45">
+        </a>
+        <button id="open" class="icon rs">
+            <i class="material-icons">menu</i>
         </button>
-        <? wp_nav_menu(); ?>
-    </nav>
+
+        <nav>
+            <button id="close" class="icon">
+                <i class="material-icons">clear</i>
+            </button>
+            <? wp_nav_menu(); ?>
+        </nav>
+    </header>
