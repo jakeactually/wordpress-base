@@ -13,7 +13,7 @@
             <i class="material-icons">menu</i>
         </button>
         <a href="<?= get_site_url() ?>" class="no-dec">
-            <img src="<?= get_template_directory_uri() ?>/logo.png" alt="logo" height="45">
+            <img src="<?= logo ?? "" ?>" alt="logo" height="45">
         </a>
         
         <div class="screen"></div>
