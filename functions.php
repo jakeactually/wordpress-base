@@ -3,7 +3,7 @@
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     register_nav_menus(['main' => "Principal"]);
-    
+
     add_action('wp_enqueue_scripts', function() {
         wp_enqueue_style('materialIcons', "https://fonts.googleapis.com/icon?family=Material+Icons");
         wp_enqueue_style('roboto', "https://fonts.googleapis.com/css?family=Roboto:400,700");
