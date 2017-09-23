@@ -9,17 +9,15 @@
 <body <? body_class(); ?>>
     
     <header id="header">
-        <a href="<?= get_site_url() ?>">
-            <img src="<?= get_template_directory_uri() ?>/logo.png" alt="logo" height="45">
-        </a>
-        <button id="open" class="icon rs">
+        <button class="icon">
             <i class="material-icons">menu</i>
         </button>
-
+        <a href="<?= get_site_url() ?>" class="no-dec">
+            <img src="<?= get_template_directory_uri() ?>/logo.png" alt="logo" height="45">
+        </a>
+        
+        <div class="screen"></div>
         <nav>
-            <button id="close" class="icon">
-                <i class="material-icons">clear</i>
-            </button>
             <? wp_nav_menu(); ?>
         </nav>
     </header>
