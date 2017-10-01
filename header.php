@@ -8,12 +8,14 @@
 </head>
 <body <? body_class(); ?>>
     
+    <? $titan = TitanFramework::getInstance('forastero'); ?>
+
     <header id="header">
         <button class="icon">
             <i class="material-icons">menu</i>
         </button>
         <a href="<?= get_site_url() ?>" class="no-dec">
-            <img src="<?= get_stylesheet_directory_uri() . "/logo.png" ?>" alt="logo">
+            <img src="<?= wp_get_attachment_url($titan->getOption('logo')) ?>" alt="logo">
         </a>
         
         <div class="screen"></div>
