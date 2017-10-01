@@ -15,4 +15,23 @@
         wp_enqueue_script('wordpressBase', get_template_directory_uri() . "/script.js");
     });
 
+    add_action('tf_create_options', function() {
+        $titan = TitanFramework::getInstance('wordpressBase');
+        $adminPanel = $titan->createAdminPanel(['name' => "Wordpress base"]);
+        $adminPanel->createOption([
+            'type' => 'file',
+            'id' => 'logo',
+            'name' => "Logo",
+            'label' => "Escoger archivo"
+        ]);
+        $adminPanel->createOption([
+            'type' => 'editor',
+            'id' => 'footer',
+            'name' => "Footer"
+        ]);
+        $adminPanel->createOption([
+            'type' => 'save'
+        ]);
+    });
+
 ?>

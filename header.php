@@ -8,7 +8,7 @@
 </head>
 <body <? body_class(); ?>>
     
-    <? $titan = TitanFramework::getInstance('forastero'); ?>
+    <? $titan = TitanFramework::getInstance('wordpressBase'); ?>
 
     <header id="header">
         <button class="icon">
