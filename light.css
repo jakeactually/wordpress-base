@@ -5,22 +5,26 @@ body { font-family: "Roboto", sans-serif; }
 a, a:visited, a:focus { color: #2196F3; }
 a.no-dec { text-decoration: none; }
 p { font-size: 16px; line-height: 1.5; }
+hr { border: none; border-bottom: 1px solid #757575; margin: 20px 0; }
 iframe { border: none; width: 100%; }
 
 /* Flex grid */
 
+.f12, .f8, .f6, .f4, .f3 {
+    margin-bottom: 10px;
+}
+
 @media (min-width: 768px) {
     .flex {
         display: flex;
-        margin-bottom: 10px;
     }
 
-    .flex:last-child {
-        margin-bottom: 0;
-    }
-
-    .flex > div:not(:last-child) {
+    .flex > div {
         margin-right: 10px;
+    }
+  
+    .flex > div:last-child {
+        margin-right: 0;
     }
 
     .f12 { flex-basis: 100%; }
@@ -59,22 +63,22 @@ fieldset label {
 }
 
 input:focus,
+button:focus,
 textarea:focus,
-select:focus,
-button:focus {
+select:focus {
     outline: none;
 }
 
 input[type="text"],
-input[type="email"],
 input[type="password"],
+input[type="email"],
 input[type="number"],
 select {
     box-sizing: border-box;
     width: 100%;
     height: 35px;
     padding: 0 10px;
-    border: 1px solid #607D8B;
+    border: 1px solid #757575;
     font-family: inherit;
     font-size: 1rem;
 }
@@ -84,7 +88,7 @@ textarea {
     width: 100%;
     min-height: 100px;
     padding: 10px;
-    border: 1px solid #607D8B;
+    border: 1px solid #757575;
     font-family: inherit;
     font-size: 1rem;
 }
@@ -203,7 +207,7 @@ button.white:hover {
 
 button.white.disabled {
     background-color: #FFFFFF;
-    color: #9E9E9E;
+    color: #757575;
 }
 
 /* Center */
@@ -316,7 +320,6 @@ button.center {
 
 .modal > h1 {
     margin: 0;
-    color: #37474F;
 }
 
 .modal .content {
