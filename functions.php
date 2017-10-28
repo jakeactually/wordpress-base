@@ -32,6 +32,10 @@
             'id' => 'footer',
             'name' => "Footer"
         ]);
+
+        if (function_exists('wordpressBase')) {
+            wordpressBase($adminPanel);
+        }
         
         $adminPanel->createOption([
             'type' => 'save'
