@@ -8,14 +8,14 @@
 </head>
 <body <? body_class(); ?>>
     
-    <? $titan = TitanFramework::getInstance('wordpressBase'); ?>
+    <? global $wp_base; ?>
 
     <header id="header">
         <button class="icon">
             <i class="material-icons">menu</i>
         </button>
         <a href="<?= get_site_url() ?>" class="no-dec">
-            <img src="<?= wp_get_attachment_url($titan->getOption('logo')) ?>" alt="logo">
+            <img src="<?= $wp_base['logo']['url'] ?>" alt="logo">
         </a>
         
         <div class="screen"></div>

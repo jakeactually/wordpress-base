@@ -11,35 +11,39 @@
         wp_enqueue_style('light', get_template_directory_uri() . "/light.css");
         wp_enqueue_style('wordpressBase', get_stylesheet_uri());
         wp_enqueue_script('hammer', "https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js");
-        wp_enqueue_script('$', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js");
+        wp_enqueue_script('$', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js");
         wp_enqueue_script('wordpressBase', get_template_directory_uri() . "/script.js");
     });
 
-    add_action('tf_create_options', function() {
-        $titan = TitanFramework::getInstance('wordpressBase');
+    $opt_name = "wp_base";
+     
+    Redux::setArgs($opt_name, [
+        'opt_name' => $opt_name,
+        'menu_title' => 'WP Base',
+    ]);
 
-        $adminPanel = $titan->createAdminPanel(['name' => "Wordpress base"]);
+    $fields = [
+        [
+            'type'     => 'media',
+            'id'       => 'logo',
+            'title'    => 'Logo',
+        ],
+        [
+            'type'     => 'editor',
+            'id'       => 'footer',
+            'title'    => 'Footer'
+        ]
+    ];
 
-        $adminPanel->createOption([
-            'type' => 'file',
-            'id' => 'logo',
-            'name' => "Logo",
-            'label' => "Escoger archivo"
-        ]);
+    if (function_exists('additionalFields')) {
+        $fields = array_merge($fields, additionalFields());
+    }
 
-        $adminPanel->createOption([
-            'type' => 'editor',
-            'id' => 'footer',
-            'name' => "Footer"
-        ]);
-
-        if (function_exists('wordpressBase')) {
-            wordpressBase($adminPanel);
-        }
-        
-        $adminPanel->createOption([
-            'type' => 'save'
-        ]);
-    });
+    Redux::setSection($opt_name, [
+        'id'     => 'general',
+        'title'  => "General",
+        'icon'   => 'el el-home',  
+        'fields' => $fields
+    ]);
 
 ?>

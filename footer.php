@@ -1,7 +1,7 @@
-    <? $titan = TitanFramework::getInstance('wordpressBase'); ?>
+    <? global $wp_base; ?>
 
     <footer id="footer">
-        <?= $titan->getOption('footer') ?>
+        <?= $wp_base['footer'] ?>
     </footer>
 
     <? wp_footer(); ?>
