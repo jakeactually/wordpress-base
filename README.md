@@ -1,2 +1,2 @@
 # wordpress-base
-Base for wordpress themes.
+Base for wordpress themes
